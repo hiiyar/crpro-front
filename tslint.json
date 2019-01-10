@@ -77,7 +77,8 @@
     ],
     "no-unused-variable": true,
     "ban-types": false,
-    "no-shadowed-variable": false
+    "no-shadowed-variable": false,
+    "no-empty-interface": false
   },
   "rulesDirectory": [
     "node_modules/tslint-eslint-rules/dist/rules"
