@@ -1,10 +1,10 @@
 import styled from '@emotion/styled';
 import * as React from 'react';
-import { IDeck } from '../../../interfaces/playerInformations';
+import { IDeck } from '../../../interfaces/deck';
 import Deck from '../../Shared/Deck';
 
 interface IProps {
-  deck: IDeck[];
+  deck: IDeck;
 }
 
 interface IState {}

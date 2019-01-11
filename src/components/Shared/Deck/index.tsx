@@ -1,9 +1,9 @@
 import styled from '@emotion/styled';
 import * as React from 'react';
-import { IDeck } from '../../../interfaces/playerInformations';
+import { ICard, IDeck } from '../../../interfaces/deck';
 
 interface IProps {
-  deck: IDeck[];
+  deck: IDeck;
 }
 
 interface IState {}
@@ -18,6 +18,7 @@ const Cart = styled.img`
   width: 40px;
   height: 40px;
   border-radius: 50%;
+  border: 1px solid;
 `;
 
 export default class Deck extends React.PureComponent<IProps, IState> {
@@ -25,7 +26,7 @@ export default class Deck extends React.PureComponent<IProps, IState> {
     const { deck } = this.props;
     return (
       <Container>
-        {deck.map((card: IDeck, index: number) => {
+        {deck.cards.map((card: ICard, index: number) => {
           return <Cart src={card.image} key={index} />;
         })}
       </Container>

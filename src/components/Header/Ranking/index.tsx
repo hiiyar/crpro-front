@@ -11,7 +11,7 @@ interface IState {}
 const Container = styled.div`
   display: flex;
   padding: 12px;
-  width: 50%;
+  width: 60%;
   font-size: 30px;
 `;
 
@@ -24,6 +24,7 @@ const Icon = styled.img`
   width: 40px;
   height: 40px;
   border-radius: 50%;
+  border: 1px solid;
 `;
 
 const Position = styled.span`

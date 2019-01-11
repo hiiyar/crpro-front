@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
-import * as React from 'react';
 import { Component } from 'react';
+import * as React from 'react';
 import { IPlayer } from '../../interfaces/playerInformations';
 import BestDeck from './BestDeck';
 import GrandChallange from './GrandChallange';
@@ -44,14 +44,17 @@ export default class Header extends Component<IProps, IState> {
 
     this.state = {
       player: {
-        bestDeck: [
-          { image: 'https://bit.ly/2FoDHQL' },
-          { image: 'https://bit.ly/2FoDHQL' },
-          { image: 'https://bit.ly/2FoDHQL' },
-          { image: 'https://bit.ly/2FoDHQL' },
-          { image: 'https://bit.ly/2FoDHQL' },
-          { image: 'https://bit.ly/2FoDHQL' },
-        ],
+        bestDeck: {
+          cards: [
+            { image: 'https://bit.ly/2FoDHQL' },
+            { image: 'https://bit.ly/2FoDHQL' },
+            { image: 'https://bit.ly/2FoDHQL' },
+            { image: 'https://bit.ly/2FoDHQL' },
+            { image: 'https://bit.ly/2FoDHQL' },
+            { image: 'https://bit.ly/2FoDHQL' },
+          ],
+          name: 'Ram Bridge',
+        },
         grandChallenge: {
           name: 'GC-12',
           wins: 22,
