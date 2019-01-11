@@ -6,7 +6,7 @@ interface IProps {
   grandChallenge: IGrandChallenge;
 }
 
-interface IState { }
+interface IState {}
 
 const Container = styled.div`
   display: flex;
@@ -34,14 +34,17 @@ const ChallangeWins = styled.span`
   margin: 0 20px;
 `;
 
-export default class GrandChallange extends React.PureComponent<IProps, IState> {
+export default class GrandChallange extends React.PureComponent<
+  IProps,
+  IState
+> {
   public render() {
     const { grandChallenge } = this.props;
 
     return (
       <Container>
         <Content>
-          <Icon src='https://bit.ly/2FoDHQL' alt='Ranking' />
+          <Icon src="https://bit.ly/2FoDHQL" alt="Ranking" />
           <Challange>
             <span>{grandChallenge.name}</span>
             <ChallangeWins>{grandChallenge.wins}</ChallangeWins>

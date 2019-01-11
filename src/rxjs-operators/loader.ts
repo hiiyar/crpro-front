@@ -10,13 +10,17 @@ export function setup(loader: ILoader): void {
 }
 
 export function loader<T>(loaderComponent: ILoader = globalLoaderComponent) {
-  return (source: Observable<T>) => source.lift<T>(new LoaderOperator(loaderComponent));
+  return (source: Observable<T>) =>
+    source.lift<T>(new LoaderOperator(loaderComponent));
 }
 
 class LoaderOperator {
-  constructor(private loaderComponent: any) { }
+  constructor(private loaderComponent: any) {}
 
-  public call(subscriber: Subscriber<any>, source: Observable<any>): Subscription {
+  public call(
+    subscriber: Subscriber<any>,
+    source: Observable<any>,
+  ): Subscription {
     return source
       .pipe(rxjsOperators.delay(500))
       .subscribe(new LoaderSubscriber(subscriber, this.loaderComponent));

@@ -6,7 +6,7 @@ interface IProps {
   ranking: IRanking;
 }
 
-interface IState { }
+interface IState {}
 
 const Container = styled.div`
   display: flex;
@@ -47,12 +47,12 @@ export default class Ranking extends React.PureComponent<IProps, IState> {
     return (
       <Container>
         <Content>
-          <Icon src='https://bit.ly/2FoDHQL' alt='Ranking' />
+          <Icon src="https://bit.ly/2FoDHQL" alt="Ranking" />
           <Position>
             {ranking.position}
             <LastPositionDifference>
               {ranking.lastPositionDifference}
-              <ArrowIcon src='/static/icons/arrowTop.svg' />
+              <ArrowIcon src="/static/icons/arrowTop.svg" />
             </LastPositionDifference>
           </Position>
         </Content>

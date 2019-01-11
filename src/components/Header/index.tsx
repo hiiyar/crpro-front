@@ -11,7 +11,7 @@ interface IState {
   player: IPlayer;
 }
 
-interface IProps { }
+interface IProps {}
 
 const Player = styled.div`
   display: flex;
@@ -50,11 +50,11 @@ export default class Header extends Component<IProps, IState> {
           { image: 'https://bit.ly/2FoDHQL' },
           { image: 'https://bit.ly/2FoDHQL' },
           { image: 'https://bit.ly/2FoDHQL' },
-          { image: 'https://bit.ly/2FoDHQL' }
+          { image: 'https://bit.ly/2FoDHQL' },
         ],
         grandChallenge: {
           name: 'GC-12',
-          wins: 22
+          wins: 22,
         },
         informations: {
           avatar: 'https://bit.ly/2skaQ8x',
@@ -65,9 +65,9 @@ export default class Header extends Component<IProps, IState> {
         },
         ranking: {
           lastPositionDifference: 32,
-          position: 1234
-        }
-      }
+          position: 1234,
+        },
+      },
     };
   }
 
@@ -85,7 +85,6 @@ export default class Header extends Component<IProps, IState> {
           </Performance>
           <VerticalSeparator />
           <BestDeck deck={player.bestDeck} />
-
         </Player>
 
         <HorizontalSeparator />

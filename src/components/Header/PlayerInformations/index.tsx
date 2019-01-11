@@ -6,7 +6,7 @@ interface IProps {
   user: IPlayerInformations;
 }
 
-interface IState { }
+interface IState {}
 
 const Container = styled.div`
   display: flex;
@@ -51,21 +51,25 @@ const ClanWrapper = styled.div`
   margin: 0 15px 0 0;
 `;
 
-export default class PlayerInformations extends React.PureComponent<IProps, IState> {
-
+export default class PlayerInformations extends React.PureComponent<
+  IProps,
+  IState
+> {
   public render() {
     const { user } = this.props;
 
     return (
       <Container>
         <Avatar>
-          <AvatarImage src={user.avatar} alt='LoudJean' />
+          <AvatarImage src={user.avatar} alt="LoudJean" />
         </Avatar>
         <User>
           <span>{user.username}</span>
           <ClashRoyaleId>{user.id}</ClashRoyaleId>
           <Clan>
-            <ClanWrapper><AvatarImage src={user.clanImage} alt={user.clanName} /></ClanWrapper>
+            <ClanWrapper>
+              <AvatarImage src={user.clanImage} alt={user.clanName} />
+            </ClanWrapper>
             {user.clanName}
           </Clan>
         </User>
