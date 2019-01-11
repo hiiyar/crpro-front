@@ -11,7 +11,7 @@ interface IState {}
 const Container = styled.div`
   display: flex;
   padding: 12px;
-  width: 60%;
+  width: 61%;
   font-size: 30px;
 `;
 
