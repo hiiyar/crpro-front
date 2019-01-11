@@ -7,7 +7,7 @@ interface IProps {
   deck: IDeck;
 }
 
-interface IState { }
+interface IState {}
 
 const Container = styled.div`
   width: 100%;

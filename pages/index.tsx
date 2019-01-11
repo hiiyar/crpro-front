@@ -24,8 +24,11 @@ export default class Index extends Component {
       <div>
         <Head>
           <title>CRPRO</title>
-          <meta charSet='utf-8' />
-          <meta name='viewport' content='initial-scale=1.0, width=device-width' />
+          <meta charSet="utf-8" />
+          <meta
+            name="viewport"
+            content="initial-scale=1.0, width=device-width"
+          />
         </Head>
 
         <Header />
@@ -38,12 +41,7 @@ export default class Index extends Component {
             <BestDecks />
           </TableContainer>
           <TableContainer>
-            <Table
-              title='Grand Challenge'
-              rows={[
-                (<div>...</div>)
-              ]}
-            />
+            <Table title="Grand Challenge" rows={[<div>...</div>]} />
           </TableContainer>
         </Content>
       </div>

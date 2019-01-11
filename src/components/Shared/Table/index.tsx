@@ -5,7 +5,7 @@ interface IProps {
   title?: string;
   rows: React.ReactNode[];
 }
-interface IState { }
+interface IState {}
 
 const Container = styled.div`
   width: 100%;
@@ -28,7 +28,7 @@ const Button = styled.span`
 const Content = styled.div`
   border: 1px solid;
   height: auto;
-  background: #CFDCF4;
+  background: #cfdcf4;
   padding: 0 10px;
   height: 490px;
   overflow: hidden;
@@ -49,13 +49,9 @@ export default class Table extends React.PureComponent<IProps, IState> {
           <Button>View All ></Button>
         </Header>
         <Content>
-          {
-            rows.map((row: React.ReactNode, index: number) =>
-              <Row key={index}>
-                {row}
-              </Row>
-            )
-          }
+          {rows.map((row: React.ReactNode, index: number) => (
+            <Row key={index}>{row}</Row>
+          ))}
         </Content>
       </Container>
     );

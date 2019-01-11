@@ -8,7 +8,7 @@ interface IState {
   bestDecks: IBestDeck[];
 }
 
-interface IProps { }
+interface IProps {}
 
 const Row = styled.div`
   font-size: 30px;
@@ -37,13 +37,13 @@ export default class BestDecks extends React.PureComponent<IProps, IState> {
               { image: 'https://bit.ly/2FoDHQL' },
               { image: 'https://bit.ly/2FoDHQL' },
               { image: 'https://bit.ly/2FoDHQL' },
-              { image: 'https://bit.ly/2FoDHQL' }
+              { image: 'https://bit.ly/2FoDHQL' },
             ],
-            name: 'Ram Bridge'
+            name: 'Ram Bridge',
           },
           draw: 1,
           lose: 2,
-          wins: 3
+          wins: 3,
         },
         {
           deck: {
@@ -53,13 +53,13 @@ export default class BestDecks extends React.PureComponent<IProps, IState> {
               { image: 'https://bit.ly/2FoDHQL' },
               { image: 'https://bit.ly/2FoDHQL' },
               { image: 'https://bit.ly/2FoDHQL' },
-              { image: 'https://bit.ly/2FoDHQL' }
+              { image: 'https://bit.ly/2FoDHQL' },
             ],
-            name: 'Defensive Deck'
+            name: 'Defensive Deck',
           },
           draw: 3,
           lose: 2,
-          wins: 5
+          wins: 5,
         },
         {
           deck: {
@@ -69,15 +69,15 @@ export default class BestDecks extends React.PureComponent<IProps, IState> {
               { image: 'https://bit.ly/2FoDHQL' },
               { image: 'https://bit.ly/2FoDHQL' },
               { image: 'https://bit.ly/2FoDHQL' },
-              { image: 'https://bit.ly/2FoDHQL' }
+              { image: 'https://bit.ly/2FoDHQL' },
             ],
-            name: 'Ram Bridge'
+            name: 'Ram Bridge',
           },
           draw: 1,
           lose: 2,
-          wins: 3
-        }
-      ]
+          wins: 3,
+        },
+      ],
     };
   }
 
@@ -90,25 +90,21 @@ export default class BestDecks extends React.PureComponent<IProps, IState> {
         <Row>
           <DeckInformations>
             <span>{bestDeck.deck.name}</span>
-            <span>{bestDeck.wins}W {bestDeck.lose}L {bestDeck.draw}D</span>
+            <span>
+              {bestDeck.wins}W {bestDeck.lose}L {bestDeck.draw}D
+            </span>
           </DeckInformations>
           <div>
             <Deck deck={bestDeck.deck} />
           </div>
-        </Row>
-      )
+        </Row>,
+      ),
     );
 
     return rows;
-  }
+  };
 
   public render() {
-
-    return (
-      <Table
-        title='Battles'
-        rows={this.getBestDecks()}
-      />
-    );
+    return <Table title="Battles" rows={this.getBestDecks()} />;
   }
 }

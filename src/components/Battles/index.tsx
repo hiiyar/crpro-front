@@ -8,7 +8,7 @@ interface IState {
   battles: IBattle[];
 }
 
-interface IProps { }
+interface IProps {}
 
 const Row = styled.div`
   font-size: 30px;
@@ -38,9 +38,9 @@ export default class Battles extends React.PureComponent<IProps, IState> {
               { image: 'https://bit.ly/2FoDHQL' },
               { image: 'https://bit.ly/2FoDHQL' },
               { image: 'https://bit.ly/2FoDHQL' },
-              { image: 'https://bit.ly/2FoDHQL' }
+              { image: 'https://bit.ly/2FoDHQL' },
             ],
-            name: 'Ram Bridge'
+            name: 'Ram Bridge',
           },
           opponentName: '4ever',
         },
@@ -54,9 +54,9 @@ export default class Battles extends React.PureComponent<IProps, IState> {
               { image: 'https://bit.ly/2FoDHQL' },
               { image: 'https://bit.ly/2FoDHQL' },
               { image: 'https://bit.ly/2FoDHQL' },
-              { image: 'https://bit.ly/2FoDHQL' }
+              { image: 'https://bit.ly/2FoDHQL' },
             ],
-            name: 'Ram Bridge'
+            name: 'Ram Bridge',
           },
           opponentName: 'Skull33',
         },
@@ -70,9 +70,9 @@ export default class Battles extends React.PureComponent<IProps, IState> {
               { image: 'https://bit.ly/2FoDHQL' },
               { image: 'https://bit.ly/2FoDHQL' },
               { image: 'https://bit.ly/2FoDHQL' },
-              { image: 'https://bit.ly/2FoDHQL' }
+              { image: 'https://bit.ly/2FoDHQL' },
             ],
-            name: 'Ram Bridge'
+            name: 'Ram Bridge',
           },
           opponentName: '4ever',
         },
@@ -86,13 +86,13 @@ export default class Battles extends React.PureComponent<IProps, IState> {
               { image: 'https://bit.ly/2FoDHQL' },
               { image: 'https://bit.ly/2FoDHQL' },
               { image: 'https://bit.ly/2FoDHQL' },
-              { image: 'https://bit.ly/2FoDHQL' }
+              { image: 'https://bit.ly/2FoDHQL' },
             ],
-            name: 'Ram Bridge'
+            name: 'Ram Bridge',
           },
           opponentName: '4ever',
-        }
-      ]
+        },
+      ],
     };
   }
 
@@ -111,20 +111,14 @@ export default class Battles extends React.PureComponent<IProps, IState> {
           <div>
             <Deck deck={battle.deck} />
           </div>
-        </Row>
-      )
+        </Row>,
+      ),
     );
 
     return rows;
-  }
+  };
 
   public render() {
-
-    return (
-      <Table
-        title='Battles'
-        rows={this.getBattles()}
-      />
-    );
+    return <Table title="Battles" rows={this.getBattles()} />;
   }
 }

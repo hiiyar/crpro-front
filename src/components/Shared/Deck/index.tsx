@@ -6,7 +6,7 @@ interface IProps {
   deck: IDeck;
 }
 
-interface IState { }
+interface IState {}
 
 const Container = styled.div`
   display: grid;
