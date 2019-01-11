@@ -1,9 +1,11 @@
+import { IDeck } from './deck';
+
 export interface IPlayer {
   informations: IPlayerInformations;
   ranking: IRanking;
   grandChallenge: IGrandChallenge;
-  bestDeck: IDeck[];
-  bestDeckAgainst?: IDeck[];
+  bestDeck: IDeck;
+  bestDeckAgainst?: IDeck;
 }
 
 export interface IPlayerInformations {
@@ -22,8 +24,4 @@ export interface IRanking {
 export interface IGrandChallenge {
   name: string;
   wins: number;
-}
-
-export interface IDeck {
-  image: string;
 }
