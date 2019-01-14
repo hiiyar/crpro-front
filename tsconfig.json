@@ -21,7 +21,8 @@
     "strictNullChecks": true,
     "suppressImplicitAnyIndexErrors": true,
     "noUnusedLocals": true,
-    "target": "esnext"
+    "target": "esnext",
+    "types": ["node", "@emotion/core"]
   },
   "exclude": [
     "node_modules",
@@ -31,5 +32,5 @@
     "webpack",
     "jest",
     "src/setupTests.ts"
-  ]
+  ],
 }

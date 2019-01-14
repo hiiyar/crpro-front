@@ -23,99 +23,88 @@ const Clan = styled.div`
 `;
 
 export default class Battles extends React.PureComponent<IProps, IState> {
-  constructor(props: IProps) {
-    super(props);
-
-    this.state = {
-      battles: [
-        {
-          clan: 'Hiiyar',
-          crownsReceived: 20,
-          deck: {
-            cards: [
-              { image: 'https://bit.ly/2FoDHQL' },
-              { image: 'https://bit.ly/2FoDHQL' },
-              { image: 'https://bit.ly/2FoDHQL' },
-              { image: 'https://bit.ly/2FoDHQL' },
-              { image: 'https://bit.ly/2FoDHQL' },
-              { image: 'https://bit.ly/2FoDHQL' },
-            ],
-            name: 'Ram Bridge',
-          },
-          opponentName: '4ever',
+  state = {
+    battles: [
+      {
+        clan: 'Hiiyar',
+        crownsReceived: 20,
+        deck: {
+          cards: [
+            { image: 'https://bit.ly/2FoDHQL' },
+            { image: 'https://bit.ly/2FoDHQL' },
+            { image: 'https://bit.ly/2FoDHQL' },
+            { image: 'https://bit.ly/2FoDHQL' },
+            { image: 'https://bit.ly/2FoDHQL' },
+            { image: 'https://bit.ly/2FoDHQL' },
+          ],
+          name: 'Ram Bridge',
         },
-        {
-          clan: 'Hiiyar',
-          crownsReceived: 20,
-          deck: {
-            cards: [
-              { image: 'https://bit.ly/2FoDHQL' },
-              { image: 'https://bit.ly/2FoDHQL' },
-              { image: 'https://bit.ly/2FoDHQL' },
-              { image: 'https://bit.ly/2FoDHQL' },
-              { image: 'https://bit.ly/2FoDHQL' },
-              { image: 'https://bit.ly/2FoDHQL' },
-            ],
-            name: 'Ram Bridge',
-          },
-          opponentName: 'Skull33',
+        opponentName: '4ever',
+      },
+      {
+        clan: 'Hiiyar',
+        crownsReceived: 20,
+        deck: {
+          cards: [
+            { image: 'https://bit.ly/2FoDHQL' },
+            { image: 'https://bit.ly/2FoDHQL' },
+            { image: 'https://bit.ly/2FoDHQL' },
+            { image: 'https://bit.ly/2FoDHQL' },
+            { image: 'https://bit.ly/2FoDHQL' },
+            { image: 'https://bit.ly/2FoDHQL' },
+          ],
+          name: 'Ram Bridge',
         },
-        {
-          clan: 'Hiiyar',
-          crownsReceived: 20,
-          deck: {
-            cards: [
-              { image: 'https://bit.ly/2FoDHQL' },
-              { image: 'https://bit.ly/2FoDHQL' },
-              { image: 'https://bit.ly/2FoDHQL' },
-              { image: 'https://bit.ly/2FoDHQL' },
-              { image: 'https://bit.ly/2FoDHQL' },
-              { image: 'https://bit.ly/2FoDHQL' },
-            ],
-            name: 'Ram Bridge',
-          },
-          opponentName: '4ever',
+        opponentName: 'Skull33',
+      },
+      {
+        clan: 'Hiiyar',
+        crownsReceived: 20,
+        deck: {
+          cards: [
+            { image: 'https://bit.ly/2FoDHQL' },
+            { image: 'https://bit.ly/2FoDHQL' },
+            { image: 'https://bit.ly/2FoDHQL' },
+            { image: 'https://bit.ly/2FoDHQL' },
+            { image: 'https://bit.ly/2FoDHQL' },
+            { image: 'https://bit.ly/2FoDHQL' },
+          ],
+          name: 'Ram Bridge',
         },
-        {
-          clan: 'Hiiyar',
-          crownsReceived: 20,
-          deck: {
-            cards: [
-              { image: 'https://bit.ly/2FoDHQL' },
-              { image: 'https://bit.ly/2FoDHQL' },
-              { image: 'https://bit.ly/2FoDHQL' },
-              { image: 'https://bit.ly/2FoDHQL' },
-              { image: 'https://bit.ly/2FoDHQL' },
-              { image: 'https://bit.ly/2FoDHQL' },
-            ],
-            name: 'Ram Bridge',
-          },
-          opponentName: '4ever',
+        opponentName: '4ever',
+      },
+      {
+        clan: 'Hiiyar',
+        crownsReceived: 20,
+        deck: {
+          cards: [
+            { image: 'https://bit.ly/2FoDHQL' },
+            { image: 'https://bit.ly/2FoDHQL' },
+            { image: 'https://bit.ly/2FoDHQL' },
+            { image: 'https://bit.ly/2FoDHQL' },
+            { image: 'https://bit.ly/2FoDHQL' },
+            { image: 'https://bit.ly/2FoDHQL' },
+          ],
+          name: 'Ram Bridge',
         },
-      ],
-    };
-  }
+        opponentName: '4ever',
+      },
+    ],
+  };
 
-  public getBattles = (): React.ReactNode[] => {
-    const { battles } = this.state;
-    const rows: React.ReactNode[] = [];
-
-    battles.map((battle: IBattle) =>
-      rows.push(
-        <Row>
-          <div>
-            <span>{battle.opponentName}</span>
-            <Clan>{battle.clan}</Clan>
-            <span>+{battle.crownsReceived}</span>
-          </div>
-          <div>
-            <Deck deck={battle.deck} />
-          </div>
-        </Row>,
-      ),
-    );
-
-    return rows;
+  private getBattles = () => {
+    return this.state.battles.map((battle: IBattle) => (
+      <Row>
+        <div>
+          <span>{battle.opponentName}</span>
+          <Clan>{battle.clan}</Clan>
+          <span>+{battle.crownsReceived}</span>
+        </div>
+        <div css={{ background: 'red' }}>
+          <Deck deck={battle.deck} />
+        </div>
+      </Row>
+    ));
   };
 
   public render() {
