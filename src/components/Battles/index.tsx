@@ -100,7 +100,7 @@ export default class Battles extends React.PureComponent<IProps, IState> {
           <Clan>{battle.clan}</Clan>
           <span>+{battle.crownsReceived}</span>
         </div>
-        <div css={{ background: 'red' }}>
+        <div>
           <Deck deck={battle.deck} />
         </div>
       </Row>

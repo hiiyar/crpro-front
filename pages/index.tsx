@@ -1,12 +1,14 @@
 import styled from '@emotion/styled';
-import Head from 'next/head';
-import { Component } from 'react';
 import * as React from 'react';
+
+import Layout from '../src/components/Shared/Layout';
+
 import Battles from '../src/components/Battles/index';
 import BestDecks from '../src/components/BestDecks/index';
 import Header from '../src/components/Header';
 import Table from '../src/components/Shared/Table/index';
 
+// XX @pierre: pages shouldn't have any styles on them. just building blocks
 const TableContainer = styled.div`
   width: 25%;
   padding: 10px;
@@ -18,21 +20,11 @@ const Content = styled.div`
   padding: 10px 14px;
 `;
 
-export default class Index extends Component {
+export default class Index extends React.Component {
   public render() {
     return (
-      <div>
-        <Head>
-          <title>CRPRO</title>
-          <meta charSet="utf-8" />
-          <meta
-            name="viewport"
-            content="initial-scale=1.0, width=device-width"
-          />
-        </Head>
-
+      <Layout>
         <Header />
-
         <Content>
           <TableContainer>
             <Battles />
@@ -44,7 +36,7 @@ export default class Index extends Component {
             <Table title="Grand Challenge" rows={[<div>...</div>]} />
           </TableContainer>
         </Content>
-      </div>
+      </Layout>
     );
   }
 }
