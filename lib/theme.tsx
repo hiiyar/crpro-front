@@ -12,6 +12,7 @@ export const theme = {
     500: 'hsl(209, 34%, 30%)',
     700: 'hsl(209, 61%, 16%)',
   },
+  white: 'hsla(360, 100%, 100%, 1)',
 };
 
 export type ITheme = typeof theme;

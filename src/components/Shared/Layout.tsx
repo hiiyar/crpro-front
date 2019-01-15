@@ -41,6 +41,15 @@ const footerContainer = (theme: ITheme) => css`
   background-color: ${theme.primary[700]};
 `;
 
+const contentContainer = css`
+  max-width: 1300px;
+  margin: 0 auto;
+`;
+
+export const Content: React.FunctionComponent<{}> = props => {
+  return <section css={contentContainer}>{props.children}</section>;
+};
+
 const Layout: React.FunctionComponent<Props> = props => {
   return (
     <div css={layoutContent}>
