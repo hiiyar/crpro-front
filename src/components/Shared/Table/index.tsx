@@ -9,7 +9,6 @@ interface IState {}
 
 const Container = styled.div`
   width: 100%;
-  font-family: Arial;
 `;
 
 const Header = styled.div`

@@ -15,7 +15,6 @@ interface IProps {}
 
 const Player = styled.div`
   display: flex;
-  font-family: Arial;
 `;
 
 const VerticalSeparator = styled.div`

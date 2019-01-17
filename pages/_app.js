@@ -4,6 +4,8 @@ import React from 'react';
 import { ApolloProvider } from 'react-apollo';
 import withApolloClient from '../lib/with-apollo-client';
 import Theme from '../lib/theme';
+import css from '@emotion/css';
+
 class CRPRO extends App {
   render() {
     const { Component, pageProps, apolloClient } = this.props;
