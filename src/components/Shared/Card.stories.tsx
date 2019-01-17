@@ -17,9 +17,13 @@ storiesOf('Card', module).add(
     <section>
       <p>A simple card component that involves other React elements:</p>
       <Card>{cardContent}</Card>
+      <hr />
       <p>Card component with footer:</p>
       <Card footer={footerContent}>{cardContent}</Card>
-      <p>Card with minimum height size:</p>
+      <hr />
+      <p>
+        Card with minimum height size using <code>minHeight</code> prop:
+      </p>
       <Card minHeight={300} footer={footerContent}>
         {cardContent}
         <small>Minimum height size 300px</small>

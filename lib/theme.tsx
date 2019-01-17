@@ -40,6 +40,16 @@ const global = css`
   body {
     background-color: ${theme.grey['100']};
   }
+
+  code {
+    background-color: ${theme.white};
+    color: ${theme.grey[500]};
+    padding: 4px;
+  }
+
+  hr {
+    margin: 40px 0;
+  }
 `;
 
 const Context: React.FunctionComponent = ({ children }) => (
