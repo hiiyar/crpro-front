@@ -6,6 +6,7 @@ import ProductSans from '../static/fonts/Product_Sans_Regular.ttf';
 
 export const theme = {
   primary: {
+    100: 'hsl(204, 94%, 85%)',
     300: 'hsl(208, 100%, 50%)',
     700: 'hsl(211,38%,23%)',
   },
@@ -14,6 +15,10 @@ export const theme = {
     300: 'hsl(209, 23%, 60%)',
     500: 'hsl(209, 34%, 30%)',
     700: 'hsl(209, 61%, 16%)',
+  },
+  danger: {
+    100: 'hsl(0, 100%, 91%)',
+    700: 'hsl(0, 27%, 30%)',
   },
   white: 'hsla(360, 100%, 100%, 1)',
   shadow: 'hsla(209, 29%, 80%, 1)',
