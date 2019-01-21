@@ -1,6 +1,7 @@
 import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
 import Badge from './Badge';
+import { enColors } from '../../enum/colors';
 
 storiesOf('Badge', module).add(
   'Basic',
@@ -10,7 +11,7 @@ storiesOf('Badge', module).add(
       <Badge>PRO Gamer</Badge>
 
       <p>Custom color:</p>
-      <Badge color="danger">LOSS</Badge>
+      <Badge color={enColors.danger}>LOSS</Badge>
     </section>
   )),
 );

@@ -1,12 +1,13 @@
 import * as React from 'react';
 import css from '@emotion/css';
 import { theme } from '../../../lib/theme';
+import { enColors } from '../../enum/colors';
 
 interface Props {
   /** Pallete color for badge background and font color
    * @default "primary"
    */
-  color?: string;
+  color?: enColors;
 }
 
 const badgeContainer = css`
